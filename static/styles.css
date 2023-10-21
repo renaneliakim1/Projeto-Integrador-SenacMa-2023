@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,200&display=swap');
+
+/* GERAL */
+body {
+    background-color: rgb(34, 34, 34);
+    color: white;
+    font-family: 'montserrat', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 14px;
+    padding-left: 1vh;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 980px;
+    font-size: 2em;
+}
+
+.logo {
+    width: 100px;
+    height: 90px;
+    padding-right: 50%;
+    padding-left: 30%;
+    max-width: 400px;
+}
+
+li {
+    display: inline-block;
+    margin: 20px;
+}
+
+a {
+    font-size: 3vh;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+a:hover {
+    color: #214cce;
+    transition: 0.3s all;
+}
+
+#ins-bnt {
+    border: 2px solid #214cce;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#ins-bnt:hover {
+    background-color: #214cce;
+    color: white;
+    max-width: 980px;
+}
+
+.h2-pag1 {
+    font-size: 8vh;
+    line-height: 8vh;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+span {
+    color: #214cce;
+    max-width: 980px;
+    padding-left: 1vh;
+}
+
+img {
+    width: 450px;
+    max-width: 400px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding-left: 1vh;
+}
+
+form [type=submit] {
+    height: 50px;
+    width: 50%;
+    background-color: #214cce;
+    color: white;
+    font-weight: bold;
+}
+
+form [type=submit]:hover {
+    cursor: pointer;
+}
+
+input {
+    margin-top: 20px;
+    height: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+}
+
+input[type="submit"]:hover {
+    background-color: #6688ee;
+}
+
+.div-indez {
+    background-color: rgb(34, 33, 33);
+    border: 2px solid #214cce8a;
+    padding-top: 15vh;
+    padding-bottom: 25vh;
+    padding-left: 25vh;
+    padding-right: 25vh;
+    border-radius: 6vh;
+}
+
+/* CADASTRO */
+.body-pag2 {
+    background-color: rgb(34 34 34);
+    color: white;
+    font-family: 'montserrat', sans-serif;
+    margin: 0 auto;
+}
+
+.main-cadastro {
+    width: 110vh;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vh;
+}
+
+.left-cadastro {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40vh;
+}
+
+.right-cadastro {
+    width: 50vw;
+    height: 1000vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40vh;
+}
+
+.card-cadastro {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: column;
+    flex-direction: column;
+    padding: 10px 9vh;
+    color: #214cce;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #020202e7;
+    margin-bottom: 40vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    max-width: 980px;
+}
+
+h2 {
+    font-weight: 800;
+    margin: 0;
+    padding-left: 1vh;
+    
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 35px;
+    padding-left: 10vh;
+}
+
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 7px 0px;
+}
+
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.963);
+    box-sizing: border-box;
+}
+
+.textfield > label {
+    margin-bottom: 4px;
+}
+
+.textfield > input {
+    color: #214cce;
+}
+
+.btn-cadastro {
+    width: 100%;
+    padding: 10px 0px;
+    margin: 0px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: white;
+    background: #214cce;
+    cursor: pointer;
+}
+
+.register-link {
+    font-size: 12.5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.img-cadas {
+    width: 400px;
+    max-width: 300px;
+    padding-left: 7vh;
+}
+
+.abobra {
+    color: #214cce;
+}
+
+.p {
+    max-width: 980px;
+}
+
+/* INTERFACE */
+.sessao {
+    font-size: 4vh;
+    padding-right: 30vh;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.enviarpdf {
+    font-weight: bold;
+    text-align: center;
+    background-color: #214cce51;
+    cursor: pointer;
+    border-radius: 3vh;
+    width: 60vh;
+    padding-top: 8vh;
+    margin-left: 25vh;
+}
+
+.sla {
+    margin-left: 38vh;
+}
+
+
+@media (max-whidt:1000px) {
+    main .left-cadastro .h1 {
+        height: 30px;
+        width: 20px;
+    }
+
+    ul .h1{
+        height: 30px;
+        width: 20px;
+    }
+
+    body-pag2 .enviarpdf {
+        padding-left: 4px;
+    }
+}

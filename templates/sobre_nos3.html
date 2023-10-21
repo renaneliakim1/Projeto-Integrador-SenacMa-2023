@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Sobre Audio Vision</title>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="/"><img src="/static/AUDIO VISUAL TRANSPARENTE  meno9.png" alt="logo" class="logo"></a>
+        </div>
+        <ul>
+            {% if 'logged_in' in session and session['logged_in'] %}
+            <li>
+                <a href="{{ url_for('inter') }}">Enviar PDF</a>
+            </li>
+            <li>
+                    <form method="POST" action="/logout">
+                           <button type="submit" style="background-color: rgba(255, 255, 255, 0);border-color: #214cce;border-radius: 3vh; text-align: center; padding-right: 10vh; padding-left: 3vh; font-size: 2vh; ">Encerrar Sessão</button>
+                    </form>
+            </li>
+            {% endif %}
+            {% if 'logged_in' not in session or not session['logged_in'] %}
+                <li>
+                    <a href="/">Login</a>
+                </li>
+                <li>
+                    <a id="ins-bnt" href="/cadastro">Cadastre-se</a>
+                </li>
+            {% endif %}
+        </ul>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Sobre <span>Audio Vision</span> </h1>
+                <p style="font-size: 3vh;text-align: justify;">
+                    <strong><span>Audio Vision:</span> Ampliando Horizontes Através do Som</strong><br>
+                    a Audio Vision é mais do que um simples programa. É uma inovação que transcende a tecnologia, abrindo portas e iluminando caminhos para aqueles que têm uma perspectiva única do mundo - as pessoas com deficiência visual.<br><br>
+    
+                    Em um mundo cada vez mais voltado para o digital, onde o conteúdo é frequentemente apresentado por meio de texto, gráficos e imagens, a Vision Audio se destaca como um farol de inclusão. Sua missão é simples e poderosa: transformar o texto em áudio, permitindo que os deficientes visuais acessem informações de maneira independente e significativa.<br><br>
+    
+                    <strong><span>A Importância da Audio Vision:</span> Tornando a Informação Acessível</strong><br>
+                    Para as pessoas com deficiência visual, o acesso à informação pode ser um desafio significativo. Livros, documentos, sites e até mesmo aplicativos muitas vezes dependem de elementos visuais para transmitir conhecimento. A Vision Audio quebra essa barreira ao traduzir o conteúdo escrito em narrativas sonoras envolventes.<br><br>
+    
+                    Imagine poder ler um livro, aprender sobre uma nova disciplina ou acessar documentos importantes sem depender da visão. Isso não apenas promove a independência, mas também amplia as oportunidades educacionais e profissionais para milhões de pessoas em todo o mundo.<br><br>
+    
+                    <strong><span>O Potencial de Inovação Futura</span></strong><br>
+                    A Audio Vision é mais do que uma solução para o presente; é uma semente para o futuro. À medida que a tecnologia avança, os limites do que podemos realizar com essa inovação estão apenas começando a ser explorados.<br><br>
+    
+                    No futuro, podemos esperar aprimoramentos que tornarão a experiência da Audio Vision ainda mais rica e envolvente. Recursos de inteligência artificial podem permitir a interpretação de conteúdo visual, como gráficos e diagramas, transformando-os em descrições sonoras detalhadas. Além disso, a tecnologia de síntese de voz continuará a evoluir, tornando as narrativas ainda mais naturais e expressivas.<br><br>
+    
+                    <strong><span>Conclusão:</span> Um Mundo Mais Inclusivo</strong><br>
+                    A Audio Vision é uma revolução silenciosa que está moldando um mundo mais inclusivo para todos. Ela nos lembra que a tecnologia, quando usada com compaixão e visão, tem o poder de quebrar barreiras, abrir portas e transformar vidas.<br><br>
+    
+                    À medida que olhamos para o futuro, somos inspirados pela promessa de uma sociedade onde a informação é verdadeiramente acessível a todos, independentemente de sua capacidade visual. E é a Vision Audio que nos guia nessa jornada, impulsionando a inovação e tornando esse sonho uma realidade.
+                </p>   
+            </div>
+        </section>
+    </main>
+</body>
+</html>

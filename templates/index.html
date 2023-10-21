@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="./static./style.css./responsivo">
+    <script src="{{ url_for('static', filename='install-pwa.js') }}"></script>
+    
+    <title>Inicio</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="/static/AUDIO VISUAL TRANSPARENTE  meno9.png" alt="logo" class="logo">
+        </div>
+        <ul>
+          <a href="/sobre_nos3"><li>Sobre</li></a>
+          <a href="/cadastro" id="ins-bnt"><li>Cadastre-se</li></a>
+        </ul>
+    </header>
+    <main>
+        <aside>
+            <h2 class="h2-pag1"><span>Bem vindo</span></h2> 
+            <h2 class="h2-pag1">ao AudioVision</h2>
+            <form method="POST" action="/login">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+                <input type="submit" value="Login" style="font-size: 3vh; padding-bottom: 5vh;">
+            </form>
+        </aside>
+        <article>
+            <img src="/static/login-animate.svg" alt="login">
+        </article>
+    </main>
+
+    <!-- tras as mensagens q estao no py para k-->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+
+
+{% if 'logged_in' in session and session['logged_in'] %}
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('inter') }}">Interface</a>
+    </li>
+{% endif %}
+
+<script>
+    if('serviceWorke' in navigator){
+        navigator.serviceWorker.register('/static/service-worker.js')
+        .then(function(registration) {
+            console.log('service Worker resgistrado com sucesso', registration);           
+        })
+        .catch(function(error) {
+            console.log('Erro ao registrar Service Worker:', error);
+        });
+    }
+</script>
+
+
+</body>
+</html>
